@@ -1,6 +1,27 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+const addTo = function(passed){
+
+  let add = function(inner){
+    return passed + inner;
+  }
+
+  return add;
+}
+
+console.log(addTo(6)(3));
+
+const RSVP = function(passed){
+
+  let waitlisted = function(inner){
+    return `Thank you, you've been added to the guest list under the name ${passed} for a party of ${inner}`;
+  }
+
+  return waitlisted;
+}
+
+console.log(RSVP("Virginia")(3));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
